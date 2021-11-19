@@ -38,6 +38,8 @@
     "lint": "standard --parser babel-eslint",
     "lint:fix": "standard --parser babel-eslint --fix",
     "start": "webpack-dev-server -d --inline --hot",
+    "prepare": "npm run build",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
     "dist": "webpack -p --config webpack.production.config.js",
     "test": "jest",
     "test:pub": "npm run dist && npm pack",
